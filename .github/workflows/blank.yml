@@ -10,7 +10,7 @@ on:
       IMG_URL:
         description: 'IMG_URL'
         required: true
-        default: 'https://github.com/Xpsoted/Action-Recovery-builder/releases/download/1404192362/recovery.img'
+        default: 'https://media.githubusercontent.com/media/WiNDOWS964ourU/lfs/master/recovery.img?token=ASVU2XCBBZ4IRIS2JQ2LBLTC45SQK'
 
 jobs:
   build:
@@ -42,7 +42,7 @@ jobs:
       
     - name: Start build
       run: |
-        python3 -m twrpdtgen -o dt/ recovery.img
+        python3 -m twrpdtgen -o dt/ *
     - name: ZIP device tree
       run: |
         zip -r DeviceTree.zip ./dt

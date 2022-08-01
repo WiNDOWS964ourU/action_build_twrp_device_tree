@@ -42,7 +42,8 @@ jobs:
       
     - name: Start build
       run: |
-        python3 -m twrpdtgen -o dt/ *
+        mv recovery.img?token=ASVU2XCBBZ4IRIS2JQ2LBLTC45SQK recovery.img
+        python3 -m twrpdtgen -o dt/ *.img
     - name: ZIP device tree
       run: |
         zip -r DeviceTree.zip ./dt
